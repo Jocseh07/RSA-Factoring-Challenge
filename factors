@@ -12,7 +12,7 @@ def main():
         factors(num)
     
 def factors(num):
-    for a in range(2, num):
+    for a in range(2, int(num / 2) + 1):
         if (num % a == 0):
             print("{}={}*{}".format(int(num), int(num / a), int(a)))
             return
