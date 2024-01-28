@@ -41,5 +41,5 @@ int main(int ac, char **av)
 	}
 	free(line);
 	fclose(file);
-	return (0);
+	exit(EXIT_SUCCESS);
 }
