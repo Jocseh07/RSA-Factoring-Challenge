@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import sys
 """Get factors of a number."""
+import sys
 
     
 def factors(num):
@@ -22,5 +22,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+  """Run main if the file is ran."""
+  main()
 
