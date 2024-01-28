@@ -12,10 +12,10 @@
 int main(int ac, char **av)
 {
 	FILE *file;
-	long int a = 0, b = 2, c = 0;
 	char *line = NULL;
 	size_t len = 0;
 	ssize_t nread = 0;
+	long long number = 0, div = 2, rem = 0, count = 0;
 
 	if (ac != 2)
 		exit(EXIT_FAILURE);
@@ -27,16 +27,16 @@ int main(int ac, char **av)
 	}
 	while ((nread = getline(&line, &len, file)) != -1)
 	{
-		a = atoll(line);
-		c = (a / 2) + 1;
-		while (b < c)
+		number = atoll(line);
+		while (div < ((number / 2) + 1))
 		{
-			if (a % b == 0)
+			if (number % div == 0)
 			{
-				printf("%ld=%ld*%ld\n", a, a / b, b);
+				count = number / div;
+				printf("%lld=%lld*%lld\n", number, count, div);
 				break;
 			}
-			b++;
+			div++;
 		}
 	}
 	free(line);
