@@ -12,7 +12,7 @@
 int main(int ac, char **av)
 {
 	FILE *file;
-	long int a = 0, b = 0, c = 0;
+	long int a = 0, b = 2, c = 0;
 	char *line = NULL;
 	size_t len = 0;
 	ssize_t nread = 0;
