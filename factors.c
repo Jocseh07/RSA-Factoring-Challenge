@@ -29,13 +29,14 @@ int main(int ac, char **av)
 	{
 		a = atoll(line);
 		c = (a / 2) + 1;
-		for (b = 2; b < c; b++)
+		while (b < c)
 		{
 			if (a % b == 0)
 			{
 				printf("%ld=%ld*%ld\n", a, a / b, b);
 				break;
 			}
+			b++;
 		}
 	}
 	free(line);
