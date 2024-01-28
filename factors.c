@@ -28,6 +28,7 @@ int main(int ac, char **av)
 	while ((nread = getline(&line, &len, file)) != -1)
 	{
 		number = atoll(line);
+		div = 2;
 		while (div < ((number / 2) + 1))
 		{
 			if (number % div == 0)
